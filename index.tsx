@@ -53,13 +53,6 @@ const Cheeseburger = ({
         strokeLinecap: rounded ? 'round' : 'butt',
         strokeDasharray: isToggled ? '10 24' : '10 24',
         strokeDashoffset: isToggled ? (reverse ? 10 : -10) : 0,
-        animationName: 'scale',
-        animationTimingFunction: 'ease-in-out',
-        animationDuration: '6s',
-        animationDelay: '0.0s',
-        animationIterationCount: 1,
-        animationDirection: 'normal',
-        animationFillMode: 'forwards',
     }
 
     const outerPath: React.CSSProperties = {
