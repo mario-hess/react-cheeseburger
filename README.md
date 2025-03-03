@@ -1,22 +1,119 @@
 # react-cheeseburger
-![Cheeseburger](https://media3.giphy.com/media/aG7cjLonel6I1oZJUn/giphy.gif?cid=790b7611630a748adab8f99498bb806ce1f9ad9b6691a525&rid=giphy.gif&ct=g)
 
-You need to pass your isToggled state to the component, for example:
+A simple, dependency-free hamburger menu component for React that leverages smooth CSS animations for a seamless user experience. This component does not glitch, even when clicked rapidly in succession, as it smoothly transitions back and forth during animation.
 
-    const App = () => {
-        const [toggled, setToggled] = useState(false)
+<div align="center">
+<a href="https://github.com/mario-hess/react-cheeseburger">
+<img src="https://i.imgur.com/HOaKOtV.gif" alt="Logo" width="600">
+</a>
+</div>
 
-        const toggle = (event: React.MouseEvent) => {
-            event.preventDefault()
-            setToggled(!toggled)
-        }
-        return (
-                <Cheeseburger
-                    color={'#303030'}
-                    width={60}
-                    height={60}
-                    isToggled={toggled}
-                    onClick={toggle}
-                />
-        )
-    }
+## Features
+
+- **CSS-Based Animations**: The animations are implemented entirely using CSS, providing smooth transitions without the need for additional JavaScript-based animation libraries.
+- **Highly Configurable**: Customize the appearance and animation behavior with props, including color, size, stroke width, and animation speed.
+- **No Dependencies**: No external libraries are required to use this component.
+- **Responsive and Lightweight**: The component is lightweight, responsive, and can be used on any device or screen size.
+
+## Installation
+
+The `react-cheeseburger` component does not require any external dependencies. Simply copy the `Cheeseburger` component code into your project, and you're ready to go!
+
+1. Copy the `Cheeseburger` component code (from `index.tsx`) into your project.
+2. Import and use it in your application as needed.
+
+No need to install anything via npm or yarn — this component is self-contained and dependency-free.
+
+## Usage
+
+To use the `Cheeseburger` component, you'll need to manage the `isToggled` state (whether the menu is in its "opened" or "closed" state). Here's a basic example of how to implement it in your application:
+
+### Example:
+
+```tsx
+import React, { useState } from 'react'
+import Cheeseburger from './components/react-cheesburger'
+
+const App = () => {
+  const [toggled, setToggled] = useState(false)
+
+  const toggle = (event: React.MouseEvent) => {
+    event.preventDefault()
+    setToggled(!toggled)
+  }
+
+  return (
+    <>
+      <Cheeseburger
+        color={'#303030'} // Customize the color of the cheeseburger
+        width={60} // Set the width of the cheeseburger
+        height={60} // Set the height of the cheeseburger
+        isToggled={toggled} // Pass the toggled state
+        onClick={toggle} // Trigger the toggle when clicked
+      />
+    </>
+  )
+}
+
+export default App
+```
+
+### Props
+
+The `Cheeseburger` component accepts the following props:
+
+| Prop             | Type                                               | Default Value                     | Description                                                                                                  |
+| ---------------- | -------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `isToggled`      | `boolean`                                          | `false`                           | Controls the toggled state of the hamburger menu. When `true`, the hamburger transitions to a "close" state. |
+| `onClick`        | `function` (`React.MouseEventHandler<SVGElement>`) | `undefined`                       | Callback function triggered when the component is clicked.                                                   |
+| `color`          | `string`                                           | `darkslategrey`                   | Sets the color of the hamburger menu.                                                                        |
+| `width`          | `number`                                           | `100`                             | Sets the width of the hamburger menu in pixels.                                                              |
+| `height`         | `number`                                           | `100`                             | Sets the height of the hamburger menu in pixels.                                                             |
+| `rounded`        | `boolean`                                          | `false`                           | Determines whether the stroke ends should be rounded or square.                                              |
+| `strokeWidth`    | `number`                                           | `1`                               | Specifies the width of the stroke (line thickness) of the hamburger lines.                                   |
+| `slick`          | `boolean`                                          | `false`                           | Controls whether the middle line is shifted.                                                                 |
+| `reverse`        | `boolean`                                          | `false`                           | Reverses the direction of the stroke-dashoffset animation.                                                   |
+| `rotate`         | `number`                                           | `0`                               | Rotates the hamburger menu by the specified angle (in degrees).                                              |
+| `innerlineSpeed` | `number`                                           | `350`                             | Controls the speed of the animation for the center line.                                                     |
+| `outerLineSpeed` | `number`                                           | `500`                             | Controls the speed of the animation for the outer lines.                                                     |
+| `animationType`  | `string`                                           | `cubic-bezier(0.4, 0.45, 0.5, 1)` | Defines the CSS animation timing function (e.g., `linear`, `ease-in`, `cubic-bezier`).                       |
+
+### Customization
+
+You can fully customize the appearance and behavior of the hamburger menu with the available props. For example:
+
+- Change the color: `color="#ff5733"`
+- Set different dimensions: `width={80} height={80}`
+- Adjust animation speed: `innerlineSpeed={300} outerLineSpeed={450}`
+- Enable a slick middle line: `slick={true}`
+- Add a rotation effect: `rotate={90}`
+
+### Example with Customization:
+
+```tsx
+<Cheeseburger
+  color='#ff5733'
+  width={80}
+  height={80}
+  isToggled={toggled}
+  onClick={toggle}
+  slick={true}
+  rotate={90}
+  innerlineSpeed={300}
+  outerLineSpeed={450}
+/>
+```
+
+## Key Features
+
+- **Smooth Animations**: The cheeseburger transitions smoothly back and forth when clicked rapidly, without any glitches or stuttering.
+- **Fully Customizable**: Customize color, size, and animation speeds to fit the style and performance requirements of your app.
+- **No Dependencies**: It’s a standalone React component that works without any external libraries.
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you'd like to contribute to this project. Any improvements, fixes, or additional features are welcome!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
