@@ -11,9 +11,8 @@ A simple, dependency-free hamburger menu component for React that leverages smoo
 ## Features
 
 - **CSS-Based Animations**: The animations are implemented entirely using CSS, providing smooth transitions without the need for additional JavaScript-based animation libraries.
-- **Highly Configurable**: Customize the appearance and animation behavior with props, including color, size, stroke width, and animation speed.
+- **Highly Configurable**: Customize the appearance and animation behavior with props, including color, size, stroke width, animation speed and more.
 - **No Dependencies**: No external libraries are required to use this component.
-- **Responsive and Lightweight**: The component is lightweight, responsive, and can be used on any device or screen size.
 
 ## Installation
 
@@ -103,12 +102,6 @@ You can fully customize the appearance and behavior of the hamburger menu with t
   outerLineSpeed={450}
 />
 ```
-
-## Key Features
-
-- **Smooth Animations**: The cheeseburger transitions smoothly back and forth when clicked rapidly, without any glitches or stuttering.
-- **Fully Customizable**: Customize color, size, and animation speeds to fit the style and performance requirements of your app.
-- **No Dependencies**: It’s a standalone React component that works without any external libraries.
 
 ## Contributing
 
