@@ -71,7 +71,7 @@ const Cheeseburger = ({
       style={wrapper}
       width={width}
       height={height}
-      viewBox='-5 0 20 10'
+      viewBox={`${isToggled ? -5 : -4.5} 0 20 9.8`}
       onClick={onClick}
     >
       <path
