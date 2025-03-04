@@ -104,7 +104,7 @@ You can fully customize the appearance and behavior of the hamburger menu with t
 ```
 
 ## Acknowledgements
-The animation technique used for this React component comes from [Mikael Ainalem's blog post](https://uxdesign.cc/the-menu-210bec7ad80c).
+The animation technique used for this React component is based on [Mikael Ainalem's blog post](https://uxdesign.cc/the-menu-210bec7ad80c).
 
 ## Contributing
 
