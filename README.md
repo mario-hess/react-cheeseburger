@@ -4,7 +4,7 @@ A simple, dependency-free hamburger menu component for React that leverages smoo
 
 <div align="center">
 <a href="https://github.com/mario-hess/react-cheeseburger">
-<img src="https://i.imgur.com/1OQZyYQ.gif" alt="Logo" width="460">
+<img src="https://i.imgur.com/FNtM3EJ.gif" alt="Logo" width="460">
 </a>
 </div>
 
