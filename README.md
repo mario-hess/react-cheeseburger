@@ -31,7 +31,7 @@ To use the `Cheeseburger` component, you'll need to manage the `isToggled` state
 
 ```tsx
 import React, { useState } from 'react'
-import Cheeseburger from './components/react-cheesburger'
+import Cheeseburger from './components/react-cheeseburger'
 
 const App = () => {
   const [toggled, setToggled] = useState(false)
