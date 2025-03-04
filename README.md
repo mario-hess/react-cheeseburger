@@ -1,6 +1,6 @@
 # react-cheeseburger
 
-A simple, dependency-free hamburger menu component for React that leverages smooth CSS animations for a seamless user experience. This component does not glitch, even when clicked rapidly in succession, as it smoothly transitions back and forth during animation.
+A simple, dependency-free hamburger menu component for React that leverages smooth CSS animations for a seamless user experience. This component does not glitch when clicked rapidly in succession, as it smoothly transitions back and forth during animation.
 
 <div align="center">
 <a href="https://github.com/mario-hess/react-cheeseburger">
